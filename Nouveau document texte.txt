@@ -1,0 +1,24 @@
+ALGORITHM CountChar
+Var : nbLetter, nbWords, nbVowel: intiger ;
+          sentence : string;
+BEGIN
+nbLetter:=0
+nbVowel:=0 
+nbWords:=0
+Write (“Enter the sentence ”) 
+Read (sentence)
+WHILE sentence[nbLetter] <> "." DO
+   SWITCH sentence[nbLetter] DO
+      CASE (" ") do : 
+          nbWord := nbWord + 1 ;
+        BREAK;
+      CASE ('a' Or 'e' Or 'i' Or 'u' Ou 'o' Or 'y') do : 
+          nbVowel := nbVowel +1 ;
+          nbLetter:=nbLetter+1 ;
+        BREAK;
+      DEFAULT :  
+           nbLetter:=nbLetter+1 ;
+      END_SWITCH
+  END_WHILE
+Write("This sentence contains",nbLetter,"letters and" , nbWord ," words and ",nbVowel ,"vowels");
+END
